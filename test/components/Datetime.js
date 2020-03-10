@@ -30,7 +30,7 @@ tape('Datetime', ({ test }) => {
 
     const actual = new Datetime({
       type: t.Dat,
-      options: {label: React.DOM.i(null, 'JSX label')},
+      options: {label: React.createElement('i', null, 'JSX label')},
       ctx: ctx
     }).getLocals().label
     assert.equal(actual.type, 'i')
@@ -51,7 +51,7 @@ tape('Datetime', ({ test }) => {
 
     const actual = new Datetime({
       type: t.Dat,
-      options: {help: React.DOM.i(null, 'JSX help')},
+      options: {help: React.createElement('i', null, 'JSX help')},
       ctx: ctx
     }).getLocals().help
     assert.equal(actual.type, 'i')

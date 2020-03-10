@@ -51,7 +51,7 @@ tape('Checkbox', ({ test }) => {
 
     const actual = new Checkbox({
       type: t.Bool,
-      options: {label: React.DOM.i(null, 'JSX label')},
+      options: {label: React.createElement('i', null, 'JSX label')},
       ctx: ctx
     }).getLocals().label
     assert.equal(actual.type, 'i')
@@ -72,7 +72,7 @@ tape('Checkbox', ({ test }) => {
 
     const actual = new Checkbox({
       type: t.Bool,
-      options: {help: React.DOM.i(null, 'JSX help')},
+      options: {help: React.createElement('i', null, 'JSX help')},
       ctx: ctx
     }).getLocals().help
     assert.equal(actual.type, 'i')
